@@ -1,0 +1,184 @@
+css:
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    overflow: hidden;
+}
+
+main {
+    display: flex;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+}
+
+.slide {
+    flex: 0 0 100%; /* Ensure each slide occupies 100% width */
+    transition: transform 0.5s ease-in-out;
+}
+
+.nav-btns {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+
+JAVASCRIPT:
+
+// const slides = document.querySelectorAll('.slide');
+// const prevBtn = document.querySelector('.nav-btns button:nth-child(1)');
+// const nextBtn = document.querySelector('.nav-btns button:nth-child(2)');
+
+// let currentIndex = 0;
+
+// function updateSlidePosition() {
+//     // Calculate translateX for all slides
+//     slides.forEach((slide, index) => {
+//         slide.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+//     });
+// }
+
+// // Show the next slide
+// function showNextSlide() {
+//     currentIndex = (currentIndex + 1) % slides.length; // Loop back to the first slide
+//     updateSlidePosition();
+// }
+
+// // Show the previous slide
+// function showPrevSlide() {
+//     currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Loop back to the last slide
+//     updateSlidePosition();
+// }
+
+// // Initial setup
+// updateSlidePosition();
+
+// // Add event listeners
+// nextBtn.addEventListener('click', showNextSlide);
+// prevBtn.addEventListener('click', showPrevSlide);
+
+
+
+WSCube tech
+
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+main {
+    width: 60%;
+    height: 500px;
+    margin: 100px auto 0;
+    box-shadow: 0 0 3px gray;
+    position: relative;
+}
+
+.slide {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+}
+
+.nav-btns {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.nav-btns button {
+    font-size: 25px;
+    padding: 5px;
+} */
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>corousel</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <img src="https://picsum.photos/id/786/1000/500" alt="" class="slide">
+        <img src="https://picsum.photos/id/238/1000/500" alt="" class="slide">
+        <img src="https://picsum.photos/id/258/1000/500" alt="" class="slide">
+        <img src="https://picsum.photos/id/299/1000/500" alt="" class="slide">
+    </main>
+    <div class="nav-btns">
+        <button>Prev</button>
+        <button>Next</button>
+    </div>
+</body>
+
+</html>
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
+claude AI
+
+.slides-container {
+    width: 1000px;
+    height: 500px;
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    animation: slideShow 4s infinite;
+    opacity: 0;
+}
+
+/* Stagger the animation delay for each slide */
+.slide:nth-child(1) { animation-delay: 0s; }
+.slide:nth-child(2) { animation-delay: 1s; }
+.slide:nth-child(3) { animation-delay: 2s; }
+.slide:nth-child(4) { animation-delay: 3s; }
+
+@keyframes slideShow {
+    0%, 25% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    30%, 100% {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+}
+
+/* Center the container */
+main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+/* Reset default margins */
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$$
